@@ -1,8 +1,13 @@
-import React from "react";
-import "./CyberPunkButton.scss";
+import './CyberPunkButton.scss';
 
-function CyberPunkButton() {
-  return <div className="cyberButton">CyberPunkButton</div>;
+import React from 'react';
+
+interface CyberPunkButtonInterface {
+  type: 'primary' | 'secondary' | 'tertiary';
+}
+
+function CyberPunkButton({ type }: CyberPunkButtonInterface) {
+  return <div className='cyberButton'>{type}</div>;
 }
 
 export default CyberPunkButton;
